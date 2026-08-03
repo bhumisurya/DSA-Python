@@ -1,0 +1,26 @@
+# Input number of elements
+n = int(input("Enter the number of elements: "))
+
+# Input array elements
+arr = []
+
+for i in range(n):
+    num = int(input(f"Enter element {i+1}: "))
+    arr.append(num)
+
+# Separate negative and positive numbers
+result = []
+
+# First add negative numbers
+for num in arr:
+    if num < 0:
+        result.append(num)
+
+# Then add positive numbers and zero
+for num in arr:
+    if num >= 0:
+        result.append(num)
+
+# Display the result
+print("Array after moving negative numbers to the left and positive numbers to the right:")
+print(result)
