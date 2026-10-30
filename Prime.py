@@ -1,22 +1,11 @@
-n = int(input("Number: "))
-
-def Prime(n):
-    for i in range(2,n):
+def is_primme(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n ** 0.5)+1):
         if n % i == 0:
             return False
-                
     return True
 
-if Prime(n):
-    print("Prime number")
 
-else:
-    print("Not Prime number")
-
-#Hello 
-
-m = int(input("Number: "))
-if (m % 2 == 0 and m % 3 == 0):
-    print("Not Prime number")
-else:
-    print("Prime number")
+n = int(input("Number: "))
+print(is_primme(n))

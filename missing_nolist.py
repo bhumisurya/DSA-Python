@@ -1,12 +1,11 @@
-lst = list(map(int,input("List: ").split()))
+a = [1,2,3,4,6]
 
-n = len(lst)+1
+n = len(a) + 1
 
 expected_sum = n * (n + 1) // 2
+actual_sum = sum(a)
 
-actual_sum = sum(lst)
+missing = expected_sum - actual_sum
 
-missing_no = expected_sum - actual_sum
-
-print("Missing number is: ",missing_no)
+print("The missing number is:", missing)
 

@@ -1,15 +1,13 @@
-num = int(input("Enter a number: "))
-org = num
+n = int(input())
+original = n 
 reverse = 0
-while org > 0:
-    digit = org % 10
-    reverse = (reverse * 10) + digit
-    org = org // 10 
 
-if num == reverse:
-    print("Palindrome....")
+while n > 0:
+    digit = n % 10
+    reverse = reverse * 10 + digit
+    n //= 10
 
+if reverse == original:
+    print("Palindrome..")
 else:
-    print("NOT Palindrome....")
-
-    # hello
+    print("NOT Palindrome..")
